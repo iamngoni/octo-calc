@@ -12,7 +12,7 @@ class CalculatorOperationView(APIView):
             operations = CalculatorOperation.objects.all()[:5]
             return api_response(
                 data={
-                    "operations": CalculatorOperationsModelSerializer(operations, many=True).data
+                    "operations": CalculatorOperationModelSerializer(operations, many=True).data
                 }
             ) 
         except Exception as exc:
