@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from collections import OrderedDict
 
 
-class HekimaPagination(PageNumberPagination):
+class BackendPagination(PageNumberPagination):
     page_size = 10
 
     def get_paginated_response(self, data):
