@@ -136,3 +136,7 @@ $ curl --location --request POST 'http://127.0.0.1:8000/api/1.0/calculate' \
 ---
 
 The Postman collection is also attached in the same repo [here](./Econet%20Assessment.postman_collection.json).
+
+---
+
+[Google Drive Link](https://drive.google.com/file/d/1B6Km3NfVe-y94ppJ_Exg_u-Y1x7PYfoC/view?usp=sharing)
