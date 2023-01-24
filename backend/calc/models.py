@@ -5,8 +5,8 @@ from calculator.model import SoftDeleteModel
 class CalculatorOperation(SoftDeleteModel):
     num_one = models.FloatField(null=False, blank=False)
     num_two = models.FloatField(null=False, blank=False)
-    operation = models.CharField(max_length=1, null=False, blank=False)
-    results = models.FloatField(null=False, blank=False)
+    operation = models.CharField(max_length=2, null=False, blank=False)
+    result = models.FloatField(null=False, blank=False)
 
     class Meta:
         verbose_name = "Calculator Operation"

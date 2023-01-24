@@ -11,21 +11,21 @@ class CalculatorOperationView(APIView):
         try:
             operations = CalculatorOperation.objects.all()[:5]
             return api_response(
+                request,
                 data={
                     "operations": CalculatorOperationModelSerializer(operations, many=True).data
                 }
-            ) 
+            )
         except Exception as exc:
             logger.error(exc)
             return api_response(request, num_status=500, bool_status=False)
-
 
     def post(self, request):
         try:
             payload = CalculatorOperationPayloadSerializer(data=request.data)
             if payload.is_valid():
-                operation = payload.create()
-                return api_respionse(request, data={"operation": CalculatorOperationModelSerializer(operation).data})
+                operation = payload.create(payload.validated_data)
+                return api_response(request, data={"operation": CalculatorOperationModelSerializer(operation).data})
             else:
                 logger.error(payload.errors)
                 return api_response(request, num_status=400, bool_status=False, issues=payload.errors)
