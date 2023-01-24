@@ -19,7 +19,7 @@ SECRET_KEY = "django-insecure-t0nv48%xyn#a9w3^1@_m(i0+y_*g%u$@0k7i07kd)m3g)4gf!1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "calculator.modestnerd.co", "10.0.2.2"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "calculator.modestnerd.co", "10.0.2.2", "142.93.36.21"]
 CSRF_TRUSTED_ORIGINS = ["https://calculator.modestnerd.co"]
 
 

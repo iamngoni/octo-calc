@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from loguru import logger
 from rest_framework.utils.serializer_helpers import ReturnDict
 
-from system.models import ApiRequest
+from calc.models import ApiRequest
 
 
 def status_meaning(status: int) -> dict:
@@ -52,7 +52,7 @@ def status_meaning(status: int) -> dict:
     return meaning.get(status, None)
 
 
-def hekima_response(
+def api_response(
     request,
     num_status: int = 200,
     bool_status: bool = True,
