@@ -136,7 +136,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CSRF_COOKIE_SECURE = False
 
 REST_FRAMEWORK = {
-    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "DEFAULT_PAGINATION_CLASS": "services.helpers.pagination.BackendPagination",
     "PAGE_SIZE": 4,
     "DEFAULT_AUTHENTICATION_CLASSES": [],
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
@@ -172,17 +172,3 @@ CORS_ALLOW_METHODS = [
 ]
 
 APPEND_SLASH = False
-
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://localhost:6379/0",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            "MAX_ENTRIES": 500,
-        },
-    }
-}
-
-SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-SESSION_CACHE_ALIAS = "default"
