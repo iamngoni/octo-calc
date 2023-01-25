@@ -12,6 +12,7 @@ class CalculatorOperation(SoftDeleteModel):
         verbose_name = "Calculator Operation"
         verbose_name_plural = "Calculator Operations"
         table_prefix = "co"
+        ordering = ("-updated_at",)
 
 
 class ApiRequest(SoftDeleteModel):
