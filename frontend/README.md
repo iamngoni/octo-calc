@@ -55,6 +55,17 @@ $ open coverage/index.html
 
 ---
 
+## Project Structure
+
+![Code Structure](./screenshots/Screenshot%202023-01-25%20at%2009.24.01.png)
+
+## App Design
+
+![Home Page](./screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-01-25%20at%2009.25.06.png)
+![Menu](./screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-01-25%20at%2009.25.09.png)
+![Compute Marks](./screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-01-25%20at%2009.25.13.png)
+![Historical Calculations](./screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-01-25%20at%2009.25.18.png)
+
 [coverage_badge]: coverage_badge.svg
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization

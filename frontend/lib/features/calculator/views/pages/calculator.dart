@@ -29,10 +29,12 @@ class _CalculatorPageState extends State<CalculatorPage> {
           appBar: AppBar(
             backgroundColor: Colors.white,
             elevation: 1,
-            title: const Text(
+            title: Text(
               "Compute Marks",
               style: TextStyle(
                 color: Colors.black,
+                fontWeight: FontWeight.w400,
+                fontSize: sy(12),
               ),
             ),
             iconTheme: const IconThemeData(
