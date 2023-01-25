@@ -1,8 +1,10 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
-import 'package:frontend/features/calculator/repos/abstract/calculator_repository.dart';
 import 'package:meta/meta.dart';
+
+import '../../models/calculator_operation.dart';
+import '../../repos/abstract/calculator_repository.dart';
 
 part 'calculator_event.dart';
 part 'calculator_state.dart';
@@ -12,12 +14,13 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     on<Calculate>((Calculate event, Emitter<CalculatorState> emit) async {
       try {
         emit(Calculating());
-        await repository.calculate(
+        final CalculatorOperation calculatorOperation =
+            await repository.calculate(
           event.firstNumber,
           event.secondNumber,
           event.operation,
         );
-        emit(CalculatorIdle());
+        emit(CalculatorIdle(calculatorOperation: calculatorOperation));
       } catch (e, stackTrace) {
         log(e.toString(), stackTrace: stackTrace);
         emit(CalculatorException(e.toString()));

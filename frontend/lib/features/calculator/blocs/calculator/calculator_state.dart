@@ -4,8 +4,8 @@ part of 'calculator_bloc.dart';
 abstract class CalculatorState {}
 
 class CalculatorIdle extends CalculatorState {
-  CalculatorIdle({this.result});
-  final double? result;
+  CalculatorIdle({this.calculatorOperation});
+  final CalculatorOperation? calculatorOperation;
 }
 
 class Calculating extends CalculatorState {}

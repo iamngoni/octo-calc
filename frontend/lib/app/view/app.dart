@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/features/calculator/views/pages/calculator.dart';
-import 'package:frontend/l10n/l10n.dart';
+
+import '../../features/calculator/views/pages/home.dart';
+import '../../l10n/l10n.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: CalculatorPage(),
+      home: const CalculatorHome(),
     );
   }
 }

@@ -1,5 +1,10 @@
+import '../../models/calculator_operation.dart';
+
 abstract class CalculatorRepository {
-  Future<Map> calculate(
-      double firstNumber, double secondNumber, String operation);
-  Future<Map> getPreviousCalculations();
+  Future<CalculatorOperation> calculate(
+    double firstNumber,
+    double secondNumber,
+    String operation,
+  );
+  Future<List<CalculatorOperation>> getPreviousCalculations();
 }
